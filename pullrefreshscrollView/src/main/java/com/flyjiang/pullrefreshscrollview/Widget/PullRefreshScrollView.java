@@ -32,10 +32,12 @@ public class PullRefreshScrollView extends PullRefreshBase<ScrollView> {
         super(context, attrs, defStyle);
     }
 
+
     @Override
     protected ScrollView createRefreshableView(Context context, AttributeSet attrs) {
         mScrollView = new ScrollView(context);
         return mScrollView;
+
     }
 
     @Override
@@ -45,7 +47,8 @@ public class PullRefreshScrollView extends PullRefreshBase<ScrollView> {
 
     @Override
     protected boolean isReadyForPullUp() {
-        return false;
+        return  mRefreshableView.getChildAt(0).getHeight() - mRefreshableView.getHeight()
+                == mRefreshableView.getScrollY();
     }
 
    /* @Override
