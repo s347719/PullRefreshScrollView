@@ -5,4 +5,4 @@ Gradle
 
 
 
-compile 'com.flyjiang.pullrefreshscrollview:pullrefreshscrollView:1.0.0'
+compile 'com.flyjiang.pullrefreshscrollview:pullrefreshscrollView:1.0.1'
