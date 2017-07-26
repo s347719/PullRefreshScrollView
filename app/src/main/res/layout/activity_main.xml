@@ -5,15 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.pullrefreshscrollview.flyjiang.pullrefreshscrollview.MainActivity">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="dfhafjalfjas"/>
     <com.flyjiang.pullrefreshscrollview.Widget.PullRefreshScrollView
         android:id="@+id/pullRefreshScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
 
     </com.flyjiang.pullrefreshscrollview.Widget.PullRefreshScrollView>
+
+
 
 
 </LinearLayout>

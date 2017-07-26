@@ -144,4 +144,5 @@ public class PullRefreshScrollView extends PullRefreshBase<ScrollView> {
             setLastUpdatedLabel(BaseUtils.formatDateTime(time));
         }
     }
+
 }
