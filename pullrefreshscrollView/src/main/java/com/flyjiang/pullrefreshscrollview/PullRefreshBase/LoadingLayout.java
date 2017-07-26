@@ -57,7 +57,6 @@ public abstract class LoadingLayout extends FrameLayout implements ILoadingLayou
         addView(mContainer, params);
     }
 
-
     /**
      * 显示或隐藏布局
      *

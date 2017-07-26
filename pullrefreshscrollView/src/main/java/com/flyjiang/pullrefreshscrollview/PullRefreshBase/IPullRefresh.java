@@ -65,7 +65,10 @@ public interface IPullRefresh<T extends View> {
      */
     public void onPullDownRefreshComplete();
 
-
+    /**
+     * 上拉加载网络错误
+     */
+    public void onPullUpRefreshNetError();
     /**
      * 结束上拉加载更多
      */

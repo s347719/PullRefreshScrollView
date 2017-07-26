@@ -116,4 +116,5 @@ public class DefaultFooterLoadingLayout extends CustomLoadingLayout {
         mHintTextView.setText(R.string.pushmsg_center_net_work_error_msg);
     }
 
+
 }

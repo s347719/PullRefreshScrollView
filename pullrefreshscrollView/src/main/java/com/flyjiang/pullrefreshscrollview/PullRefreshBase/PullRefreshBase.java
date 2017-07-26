@@ -302,6 +302,7 @@ public abstract class PullRefreshBase<T extends View> extends LinearLayout imple
         }
     }
 
+
     @Override
     public void onPullUpRefreshComplete() {
         if (isPullLoading()) {
@@ -317,6 +318,25 @@ public abstract class PullRefreshBase<T extends View> extends LinearLayout imple
             }, getSmoothScrollDuration());
 
             resetFooterLayout();
+            setInterceptTouchEventEnabled(false);
+        }
+    }
+
+    @Override
+    public void onPullUpRefreshNetError() {
+        if (isPullLoading()) {
+            mPullUpState = ILoadingLayout.State.NetWorkError;
+            onStateChanged(ILoadingLayout.State.NetWorkError, false);
+
+            postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    setInterceptTouchEventEnabled(true);
+                    mFooterLayout.setState(ILoadingLayout.State.NetWorkError);
+                }
+            }, getSmoothScrollDuration());
+
+//            resetFooterLayout();
             setInterceptTouchEventEnabled(false);
         }
     }
